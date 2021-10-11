@@ -4,6 +4,8 @@ description: "Solar Powered Blinken Lights based on ATtiny13A"
 show_downloads: true
 github:
   zip_url: https://github.com/wagiminator/ATtiny13-TinySat/zipball/main
+  tar_url: https://github.com/wagiminator/ATtiny13-TinySat/tarball/main
+  another_url: https://easyeda.com/wagiminator/attiny13-tinysat
 author:
   name: wagiminator
   email: wagiminator@web.de
