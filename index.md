@@ -1,4 +1,4 @@
-# TinySat - Solar Powered Blinken Lights
+# Overview
 TinySat collects the energy from up to two solar panels (max 6V) and stores it in a 1 Farad super capacitor. The ATtiny13A uses this stored energy to make two LEDs blink - even when the sun is not shining.
 
 - Design Files (EasyEDA): https://easyeda.com/wagiminator/attiny13-tinysat
