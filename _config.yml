@@ -2,6 +2,8 @@
 title: TinySat
 description: "Solar Powered Blinken Lights based on ATtiny13A"
 show_downloads: true
+github:
+  zip_url: https://github.com/wagiminator/ATtiny13-TinySat/zipball/main
 author:
   name: wagiminator
   email: wagiminator@web.de
