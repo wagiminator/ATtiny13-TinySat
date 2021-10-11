@@ -3,6 +3,8 @@ TinySat collects the energy from up to two solar panels (max 6V) and stores it i
 
 - Design Files (EasyEDA): https://easyeda.com/wagiminator/attiny13-tinysat
 
+<iframe width="560" height="315" src="//www.youtube.com/embed/SU3kYxJmWuQ" frameborder="0"> </iframe>
+
 ![TinySat_pic1.jpg](https://raw.githubusercontent.com/wagiminator/ATtiny13-TinySat/main/documentation/TinySat_pic1.jpg)
 
 # Hardware
