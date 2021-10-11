@@ -1,1 +1,15 @@
-theme: jekyll-theme-architect
+# Site settings
+title: TinySat
+description: "Solar Powered Blinken Lights based on ATtiny13A"
+author:
+  name: wagiminator
+  email: wagiminator@web.de
+minima:
+  social_links:
+    github: wagiminator
+    youtube: wagiminator
+#description: "Great site about Jekyll on GH-Pages."
+
+# Build settings
+theme: minima
+#remote_theme: jekyll/minima
