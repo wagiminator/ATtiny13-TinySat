@@ -1,6 +1,7 @@
 # Site settings
 title: TinySat
 description: "Solar Powered Blinken Lights based on ATtiny13A"
+show_downloads: true
 author:
   name: wagiminator
   email: wagiminator@web.de
