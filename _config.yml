@@ -13,6 +13,6 @@ minima:
 # Build settings
 #theme: minima
 #remote_theme: jekyll/minima
-remote_theme: alshedivat/al-folio 
+#remote_theme: alshedivat/al-folio 
 
 theme: jekyll-theme-minimal
