@@ -1,37 +1,48 @@
-## Welcome to GitHub Pages
+# TinySat - Solar Powered Blinken Lights
+TinySat collects the energy from up to two solar panels (max 6V) and stores it in a 1 Farad super capacitor. The ATtiny13A uses this stored energy to make two LEDs blink - even when the sun is not shining.
 
-You can use the [editor on GitHub](https://github.com/wagiminator/ATtiny13-TinySat/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+- Design Files (EasyEDA): https://easyeda.com/wagiminator/attiny13-tinysat
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+![TinySat_pic1.jpg](https://raw.githubusercontent.com/wagiminator/ATtiny13-TinySat/main/documentation/TinySat_pic1.jpg)
 
-### Markdown
+# Hardware
+![TinySat_wiring.png](https://raw.githubusercontent.com/wagiminator/ATtiny13-TinySat/main/documentation/TinySat_wiring.png)
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+# Compiling and Uploading the Firmware
+Since there is no ICSP header on the board, you have to program the ATtiny before putting it into the IC socket. The [AVR Programmer Adapter](https://github.com/wagiminator/AVR-Programmer/tree/master/AVR_Programmer_Adapter) can help with this.
 
-```markdown
-Syntax highlighted code block
+## If using the Arduino IDE
+- Make sure you have installed [MicroCore](https://github.com/MCUdude/MicroCore).
+- Go to **Tools -> Board -> MicroCore** and select **ATtiny13**.
+- Go to **Tools** and choose the following board options:
+  - **Clock:**  128 kHz internal osc.
+  - **BOD:**    disabled
+  - **Timing:** Micros disabled
+- Connect your programmer to your PC and to the ATtiny.
+- Go to **Tools -> Programmer** and select your ISP programmer (e.g. [USBasp](https://aliexpress.com/wholesale?SearchText=usbasp)).
+- Go to **Tools -> Burn Bootloader** to burn the fuses.
+- Open the TinySat sketch and click **Upload**.
 
-# Header 1
-## Header 2
-### Header 3
+## If using the precompiled hex-file
+- Make sure you have installed [avrdude](https://learn.adafruit.com/usbtinyisp/avrdude).
+- Connect your programmer to your PC and to the ATtiny.
+- Open a terminal.
+- Navigate to the folder with the hex-file.
+- Execute the following command (if necessary replace "usbasp" with the programmer you use):
+  ```
+  avrdude -c usbasp -p t13 -U lfuse:w:0x3b:m -U hfuse:w:0xff:m -U flash:w:tinysat.hex
+  ```
 
-- Bulleted
-- List
+## If using the makefile (Linux/Mac)
+- Make sure you have installed [avr-gcc toolchain and avrdude](http://maxembedded.com/2015/06/setting-up-avr-gcc-toolchain-on-linux-and-mac-os-x/).
+- Connect your programmer to your PC and to the ATtiny.
+- Open the makefile and change the programmer if you are not using usbasp.
+- Open a terminal.
+- Navigate to the folder with the makefile and the sketch.
+- Run "make install" to compile, burn the fuses and upload the firmware.
 
-1. Numbered
-2. List
+# License
+![license.png](https://i.creativecommons.org/l/by-sa/3.0/88x31.png)
 
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/wagiminator/ATtiny13-TinySat/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+This work is licensed under Creative Commons Attribution-ShareAlike 3.0 Unported License. 
+(http://creativecommons.org/licenses/by-sa/3.0/)
