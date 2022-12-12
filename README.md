@@ -36,10 +36,9 @@ Since there is no ICSP header on the board, you have to program the ATtiny befor
 ## If using the makefile (Linux/Mac)
 - Make sure you have installed [avr-gcc toolchain and avrdude](http://maxembedded.com/2015/06/setting-up-avr-gcc-toolchain-on-linux-and-mac-os-x/).
 - Connect your programmer to your PC and to the ATtiny.
-- Open the makefile and change the programmer if you are not using usbasp.
 - Open a terminal.
 - Navigate to the folder with the makefile and the sketch.
-- Run "make install" to compile, burn the fuses and upload the firmware.
+- Run `PROGRMR=usbasp make install` to compile, burn the fuses and upload the firmware (change PROGRMR accordingly).
 
 # License
 ![license.png](https://i.creativecommons.org/l/by-sa/3.0/88x31.png)
